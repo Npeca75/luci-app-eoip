@@ -15,7 +15,7 @@ s.anonymous = true
 s:option(Flag, "enabled", translate("Enable tunnel"))
 
 
-n = s:option(Value, "name", translate("Interface name "), translate("0 -> zeoip0, 1 -> zeoip1, etc"))
+n = s:option(Value, "name", translate("Interface name "), translate("0 will be zeoip0; 1 will be zeoip1; etc"))
 n.nocreate = true
 n.datatype = "min(0), integer"
 n.default = 0
@@ -30,7 +30,7 @@ d.nocreate = true
 d.datatype = "ipaddr"
 d.placeholder = "0.0.0.0"
 
-s:option(Flag, "dynamic", translate("Dynamic"))
+s:option(Flag, "dynamic", translate("Dynamic"), translate("Enable any peer with matching Tunnel ID to connect"))
 
 b = s:option(Value, "bind", translate("Bind address"), translate("Optional bind address"))
 b.nocreate = true
